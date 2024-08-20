@@ -1,26 +1,3 @@
-### Installation & Running the Application
-Follow these steps to clone the repository, build the Docker image, and run the application:
-
-1. **Clone the Repository**
-    ```bash
-    git clone https://github.com/theycallmetyson/taskboard-backend-demo.git
-    cd taskboard-backend-demo
-    ```
-
-2. **Build the Docker Image**
-    ```bash
-    docker compose build
-    ```
-
-3. **Start the Application**
-    ```bash
-    docker compose up -d
-    ```
-
-4. **Access the API**
-   - Once the application is running, the API can be accessed at: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-
-
 ## the assignment:
 # WEBSTEP Back-End Test
 Create a simple REST service for a task board that allows a user to create and manage different
@@ -53,3 +30,25 @@ you put in place. Some of the things we may look for are:
 When you are finished with everything please push the code to a public git repository. Include a
 README file with directions on how to install and start the application. Then send us the link. Thank
 you and we do hope you will have fun doing this assignment!
+
+### Installation & Running the Application
+Follow these steps to clone the repository, build the Docker image, and run the application:
+
+1. **Clone the Repository**
+    ```bash
+    git clone https://github.com/theycallmetyson/taskboard-backend-demo.git
+    cd taskboard-backend-demo
+    ```
+
+2. **Build the Docker Image**
+    ```bash
+    docker compose build
+    ```
+
+3. **Start the Application**
+    ```bash
+    docker compose up -d
+    ```
+
+4. **Access the API**
+   - Once the application is running, the API can be accessed at: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
