@@ -1,14 +1,27 @@
-## to run the application:
-1. clone the git
-2. ```bash
-   docker compose build
-   ```
-3. ```bash
-   docker compe up -d
-   ```
-4. the api can be accessed at localhost:8080/swager-ui.html
+### Installation & Running the Application
+Follow these steps to clone the repository, build the Docker image, and run the application:
 
-the assignment:
+1. **Clone the Repository**
+    ```bash
+    git clone https://github.com/theycallmetyson/taskboard-backend-demo.git
+    cd taskboard-backend-demo
+    ```
+
+2. **Build the Docker Image**
+    ```bash
+    docker compose build
+    ```
+
+3. **Start the Application**
+    ```bash
+    docker compose up -d
+    ```
+
+4. **Access the API**
+   - Once the application is running, the API can be accessed at: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+
+## the assignment:
 # WEBSTEP Back-End Test
 Create a simple REST service for a task board that allows a user to create and manage different
 lists of tasks which are persisted between devices. The application should implement the following
