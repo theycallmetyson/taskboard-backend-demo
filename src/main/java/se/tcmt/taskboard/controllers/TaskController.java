@@ -17,7 +17,6 @@ import java.util.List;
 public class TaskController {
 
     private static final String TASK_NOT_FOUND_MESSAGE = "Task not found";
-
     private final TaskService taskService;
 
     public TaskController(TaskService taskService) {
@@ -27,16 +26,13 @@ public class TaskController {
     @GetMapping
     public ResponseEntity<List<Task>> getAllTasks() {
         List<Task> tasks = taskService.getAllTasks();
-
         if (tasks == null) {
             throw new ServiceException("Could not get tasks");
         } else if (tasks.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
-
         return ResponseEntity.status(HttpStatus.OK).body(tasks);
     }
-
 
     @PostMapping
     public ResponseEntity<Task> createTask(@RequestParam Long listId, @RequestBody Task task) {

@@ -15,7 +15,6 @@ import java.util.List;
 public class TaskListController {
 
     private static final String LIST_NOT_FOUND_MESSAGE = "List not found";
-
     private final TaskListService taskListService;
 
     public TaskListController(TaskListService taskListService) {

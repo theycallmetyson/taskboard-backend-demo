@@ -7,7 +7,6 @@ class ApplicationTests {
 
     @Test
     void contextLoads() {
-        // A dummy test to ensure the test context loads
         Assertions.assertTrue(true);
     }
 }

@@ -23,17 +23,11 @@ public class TaskListService {
     public List<TaskList> getAllTaskLists() {
         List<TaskList> taskLists = new ArrayList<>();
         taskListRepository.findAll().forEach(taskLists::add);
-
         for (TaskList taskList : taskLists) {
             List<Task> tasks = taskService.getAllTasksByTaskListId(taskList.getId());
             taskList.setTasks(tasks);
         }
-
         return taskLists;
-    }
-
-    public TaskList getTaskListById(Long id) {
-        return taskListRepository.findById(id).orElse(null);
     }
 
     public TaskList createTaskList(String name) {
@@ -44,22 +38,15 @@ public class TaskListService {
 
     @Transactional(readOnly = true)
     public TaskList getTaskListWithTasks(Long taskListId) {
-        TaskList taskList = taskListRepository.findById(taskListId)
-                .orElse(null);
-
+        TaskList taskList = taskListRepository.findById(taskListId).orElse(null);
         List<Task> tasks = taskService.getAllTasksByTaskListId(taskListId);
-
         if (tasks == null) {
             tasks = new ArrayList<>();
         }
-
         assert taskList != null;
         taskList.setTasks(tasks);
-
         return taskList;
     }
-
-
 
     public TaskList updateTaskList(Long id, String name) {
         TaskList taskList = taskListRepository.findById(id).orElse(null);
